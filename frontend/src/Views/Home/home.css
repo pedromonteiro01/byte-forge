@@ -1,0 +1,96 @@
+/* Home.css */
+.home-container {
+    width: 100%;
+    display: flex;
+    /* Flexbox for centering */
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    /* Ensures no scrolling if image is larger than viewport */
+}
+
+.background-image-container {
+    position: relative;
+    /* Container for positioning */
+    width: 100%;
+    max-width: 100%;
+    /* Maximum width of the container */
+}
+
+.background-image {
+    width: 100%;
+    /* Full width of the container */
+    height: 100%;
+    /* Height is now controlled by the container */
+    object-fit: cover;
+    /* This will cover the div without distorting the image */
+    display: block;
+}
+
+.clock-container {
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    position: absolute;
+    top: 10%; /* Align to the top edge of the parent div */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center based on its own width */
+    width: 100%; /* Full width of the parent */
+    color: white;
+}
+
+
+.quote-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    margin-left: 5%;
+    color: white;
+}
+
+.quote {
+    font-family: 'Oswald';
+    font-size: 3.5rem;
+    margin-bottom: 30px;
+    max-width: 35%;
+    color: #3d3c3c;
+}
+
+.shop-now {
+    font-family: 'Roboto';
+    padding: 15px 20px;
+    font-size: 1.3rem;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.shop-now:hover {
+    background-color: #ccc;
+    /* Darker on hover */
+}
+
+.clock {
+    border-width: 7px !important;
+    border-color: #C9A771 !important;
+    background-color: #95774c !important;
+    opacity: 0.9;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    background-image: url(./wood-pattern.png);
+}
+
+@media (max-width: 768px) {
+    .quote {
+        font-size: 1rem;
+        width: 50%;
+    }
+
+    .shop-now {
+        padding: 15px 30px;
+        font-size: 1.25rem;
+    }
+}
