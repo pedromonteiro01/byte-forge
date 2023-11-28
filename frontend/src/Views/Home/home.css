@@ -1,41 +1,33 @@
-/* Home.css */
 .home-container {
     width: 100%;
     display: flex;
-    /* Flexbox for centering */
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    /* Ensures no scrolling if image is larger than viewport */
 }
 
 .background-image-container {
     position: relative;
-    /* Container for positioning */
     width: 100%;
     max-width: 100%;
-    /* Maximum width of the container */
 }
 
 .background-image {
     width: 100%;
-    /* Full width of the container */
     height: 100%;
-    /* Height is now controlled by the container */
     object-fit: cover;
-    /* This will cover the div without distorting the image */
     display: block;
 }
 
 .clock-container {
     display: flex;
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
+    justify-content: center;
+    align-items: center;
     position: absolute;
-    top: 10%; /* Align to the top edge of the parent div */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Center based on its own width */
-    width: 100%; /* Full width of the parent */
+    top: 10%; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
     color: white;
 }
 
@@ -71,7 +63,6 @@
 
 .shop-now:hover {
     background-color: #ccc;
-    /* Darker on hover */
 }
 
 .clock {
