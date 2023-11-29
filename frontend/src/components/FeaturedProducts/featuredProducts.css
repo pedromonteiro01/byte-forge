@@ -1,0 +1,6 @@
+.featured-products-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 2rem 5% 4rem 5%;
+}

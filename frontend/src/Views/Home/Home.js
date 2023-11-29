@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './home.css';
 import background from './b4.png';
 import Clock from 'react-simple-clock' // Make sure this component can accept an initial time prop
+import FeaturedProducts from '../../components/FeaturedProducts/FeaturedProducts';
 
 const Home = () => {
     const [time, setTime] = useState(new Date());
@@ -41,6 +42,7 @@ const Home = () => {
             </div>
             <div className='home-products-container'>
                 <p className='home-products-container-header'>Featured Products</p>
+                <FeaturedProducts />
             </div>
         </>
     );
