@@ -6,19 +6,22 @@
     align-items: center;
     padding: 10px 20px;
     color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
 }
 
 .navbar.dark {
-    background: #212121; /* Change background to black */
-    color: white; /* Adjust text color if needed */
+    background: #212121;
+    color: white;
 }
 
-/* You might also want to change the color of other elements like links */
 .navbar.dark .nav-item a {
-    color: white; /* Change link color for dark mode */
+    color: white;
 }
 
-/* Adjust the hover effect color for dark mode if needed */
 .navbar.dark .nav-item:hover::after {
     background-color: white;
 }
@@ -47,9 +50,9 @@
     padding: 15px 20px;
     transition: transform 0.3s ease, background-color 0.3s ease;
     position: relative;
-    display: flex; /* Added to apply flex properties */
-    align-items: center; /* Centers children vertically */
-    justify-content: center; /* Optional: Centers children horizontally */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .nav-item::after {
@@ -95,15 +98,12 @@
     font-weight: bold;
 }
 
-.nav-item:nth-child(1):hover {
-    cursor: pointer;
-}
-
 .nav-item:nth-child(1)::after {
     content: none;
 }
 
 .icon-container {
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;

@@ -31,7 +31,7 @@ const Navbar = () => {
                     <motion.div
                         animate={{ rotate: rotate }}
                         transition={{ duration: 0.5 }}
-                        className={darkMode ? "icon-container dark" : "icon-container"} // This div handles rotation
+                        className={darkMode ? "icon-container dark" : "icon-container"} // this div handles rotation
                     >
                         {darkMode ?
                             <IoMoonOutline
