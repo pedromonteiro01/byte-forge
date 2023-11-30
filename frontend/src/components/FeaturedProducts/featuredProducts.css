@@ -2,5 +2,10 @@
     display: flex;
     justify-content: space-between;
     width: 90%;
-    margin: 2rem 5% 4rem 5%;
+    padding: 4rem 5% 4rem 5%;
+}
+
+.featured-products-wrapper.dark {
+    background: #212121;
+    
 }

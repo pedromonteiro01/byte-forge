@@ -2,10 +2,13 @@ import template from './template.jpeg';
 import './FeaturedProductsItem.css';
 import discount from './discount.png';
 import './button.scss';
+import { useDarkMode } from '../DarkModeContext/DarkModeContext';
 import { FaArrowRight } from 'react-icons/fa';
 
-
 const FeaturedProductsItem = (props) => {
+
+    const { darkMode } = useDarkMode();
+
     return (
         <div className="featured-products-container">
             {
@@ -18,10 +21,10 @@ const FeaturedProductsItem = (props) => {
                 <div className="featured-products-image-wrapper">
                     <img src={template} alt="template" />
                 </div>
-                <div className="featured-products-item-title">
+                <div className={`featured-products-item-title ${darkMode ? 'dark' : ''}`}>
                     Restaurante Website
                 </div>
-                <div className="featured-products-item-button">
+                <div className={`featured-products-item-button ${darkMode ? 'dark' : ''}`}>
                     <div>
                         <span>Desde </span>
                         {
@@ -34,10 +37,10 @@ const FeaturedProductsItem = (props) => {
                                 <span>200€</span>
                         }
                     </div>
-                    <button class="kave-btn">
-                        <span class="kave-line"></span>
-                        <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', gap:'0.3rem'}}>
-                        Ver Mais <FaArrowRight />
+                    <button className={`kave-btn ${darkMode ? 'dark' : ''}`}>
+                        <span className={`kave-line ${darkMode ? 'dark' : ''}`}></span>
+                        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.3rem' }}>
+                            Ver Mais <FaArrowRight />
                         </div>
                     </button>
                 </div>

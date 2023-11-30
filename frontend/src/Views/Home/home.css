@@ -41,6 +41,11 @@
     color: white;
 }
 
+.quote-container.dark button {
+    color: #fff;
+    background-color: #212121;
+}
+
 .quote {
     font-family: 'Oswald';
     font-size: 3.5rem;
@@ -74,12 +79,25 @@
 }
 
 .home-products-container-header {
+    margin: 0;
+    padding-top: 4rem;
     width: 100%;
     text-align: center;
     font-family: 'Oswald';
     font-size: 2.2rem;
     color: #3d3c3c;
-    padding-bottom: 2rem;
+}
+
+.home-products-container.dark, .home-products-container-header.dark {
+    background-color: #212121; /* Or the color you want for dark mode */
+}
+
+.home-products-container.dark {
+    background-color: #212121;
+}
+
+.home-products-container-header.dark {
+    color: white;
 }
 
 @media (max-width: 768px) {

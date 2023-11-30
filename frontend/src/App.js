@@ -5,18 +5,21 @@ import Products from './Views/Products/Products';
 import Home from './Views/Home/Home';
 import ProductDetails from './Views/ProductDetails/ProductDetails';
 import Footer from './components/Footer/Footer';
+import { DarkModeProvider } from './components/DarkModeContext/DarkModeContext';
 
 function App() {
   return (
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/products" element={<Products />} />
-        <Route path="/product/:productId" element={<ProductDetails />} />
-      </Routes>
-      <Footer />
-    </Router>
+    <DarkModeProvider>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/product/:productId" element={<ProductDetails />} />
+        </Routes>
+        <Footer />
+      </Router>
+    </DarkModeProvider>
   );
 }
 

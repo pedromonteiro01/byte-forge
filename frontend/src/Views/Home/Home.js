@@ -3,9 +3,11 @@ import './home.css';
 import background from './b4.png';
 import Clock from 'react-simple-clock' // Make sure this component can accept an initial time prop
 import FeaturedProducts from '../../components/FeaturedProducts/FeaturedProducts';
+import { useDarkMode } from '../../components/DarkModeContext/DarkModeContext';
 
 const Home = () => {
     const [time, setTime] = useState(new Date());
+    const { darkMode } = useDarkMode();
 
     useEffect(() => {
         const timerID = setInterval(() => tick(), 1000);
@@ -34,14 +36,15 @@ const Home = () => {
                             style={{ color: 'white' }}
                         />
                     </div>
-                    <div className="quote-container">
+                    <div 
+                    className={`quote-container ${darkMode ? 'dark' : ''}`}>
                         <p className="quote">Everything you can imagine is real.</p>
                         <button className="shop-now">Shop now</button>
                     </div>
                 </div>
             </div>
-            <div className='home-products-container'>
-                <p className='home-products-container-header'>Featured Products</p>
+            <div className={`home-products-container ${darkMode ? 'dark' : ''}`}>
+                <p className={`home-products-container-header ${darkMode ? 'dark' : ''}`}>Featured Products</p>
                 <FeaturedProducts />
             </div>
         </>

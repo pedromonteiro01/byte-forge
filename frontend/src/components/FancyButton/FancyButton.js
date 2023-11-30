@@ -2,16 +2,21 @@ import React from 'react';
 import './FancyButton.scss';
 import { FaArrowRight } from 'react-icons/fa';
 
-
 class FancyButton extends React.Component {
     render() {
         // Generate a unique ID for each button to handle multiple instances
         const maskId = `mask_${Math.random().toString(36).substr(2, 9)}`;
         const maskStyle = `#fancy-masked-element_${maskId} { mask: url(#${maskId}); -webkit-mask: url(#${maskId}); }`;
 
+        const darkModeStyles = {
+            color: '#FFF', // Example color for text in dark mode
+            backgroundColor: '#333', // Example background color in dark mode
+        };
+
         const buttonStyle = {
             width: this.props.width,
-            height: this.props.height
+            height: this.props.height,
+            ...(this.props.darkMode ? darkModeStyles : {}),
         };
 
         const fancyFrontStyle = {
@@ -68,6 +73,7 @@ FancyButton.defaultProps = {
     fontSize: 13,
     borderWidth: 2,
     buttonText: 'Ver Mais',
+    darkMode: false,
 };
 
 export default FancyButton;

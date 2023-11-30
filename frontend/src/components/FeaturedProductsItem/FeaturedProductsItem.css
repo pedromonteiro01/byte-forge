@@ -34,6 +34,10 @@
     width: 80%;
 }
 
+.featured-products-item-title.dark {
+    color: #fff;
+}
+
 .featured-products-item-button {
     width: 80%;
     display: flex;
@@ -44,6 +48,10 @@
 .featured-products-item-button span {
     color: #b08d8d;
     font-size: 0.9rem;
+}
+
+.featured-products-item-button.dark span {
+    color: #fff;
 }
 
 .discount-wrapper {
