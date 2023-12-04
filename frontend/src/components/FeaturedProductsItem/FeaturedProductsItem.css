@@ -8,7 +8,7 @@
 
 .featured-products-item {
     width: 18rem;
-    height: 20rem;
+    height: 22rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -51,7 +51,7 @@
 }
 
 .featured-products-item-button.dark span {
-    color: #fff;
+    color: rgb(107, 110, 118);
 }
 
 .discount-wrapper {
@@ -61,7 +61,6 @@
     width: 5rem;
     height: 5rem;
     transform: rotate(360deg);
-    /* Adjust as needed */
 }
 
 .discount-wrapper img {
@@ -69,4 +68,8 @@
     height: 100%;
     object-fit: contain;
     transform: rotate(270deg);
+}
+
+.color-selection {
+    width: 80%;
 }

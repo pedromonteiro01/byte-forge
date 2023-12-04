@@ -1,41 +1,43 @@
-import template from './template.jpeg';
 import './FeaturedProductsItem.css';
 import discount from './discount.png';
 import './button.scss';
 import { useDarkMode } from '../DarkModeContext/DarkModeContext';
 import { FaArrowRight } from 'react-icons/fa';
+import ColorButton from '../ColorButton/ColorButton';
+import template from './template.jpeg';
 
 const FeaturedProductsItem = (props) => {
-
     const { darkMode } = useDarkMode();
+    const { title, price, discountPrice, colors, hasDiscount } = props;
 
     return (
         <div className="featured-products-container">
-            {
-                props.discount &&
+            {hasDiscount && (
                 <div className='discount-wrapper'>
                     <img src={discount} alt='discount item' />
                 </div>
-            }
+            )}
             <div className="featured-products-item">
                 <div className="featured-products-image-wrapper">
-                    <img src={template} alt="template" />
+                    <img src={template} alt={title} />
                 </div>
                 <div className={`featured-products-item-title ${darkMode ? 'dark' : ''}`}>
-                    Restaurante Website
+                    {title}
+                </div>
+                <div className="color-selection">
+                    <ColorButton colors={colors} />
                 </div>
                 <div className={`featured-products-item-button ${darkMode ? 'dark' : ''}`}>
                     <div>
                         <span>Desde </span>
-                        {
-                            props.discount ?
-                                <>
-                                    <span style={{ textDecoration: 'line-through' }}>200€</span>
-                                    <span style={{ display: 'block', textAlign: 'right' }}>100€</span>
-                                </>
-                                :
-                                <span>200€</span>
-                        }
+                        {hasDiscount ? (
+                            <>
+                                <span style={{ textDecoration: 'line-through' }}>{`${price}€`}</span>
+                                <span style={{ display: 'block', textAlign: 'right' }}>{`${discountPrice}€`}</span>
+                            </>
+                        ) : (
+                            <span>{`${price}€`}</span>
+                        )}
                     </div>
                     <button className={`kave-btn ${darkMode ? 'dark' : ''}`}>
                         <span className={`kave-line ${darkMode ? 'dark' : ''}`}></span>
@@ -46,7 +48,7 @@ const FeaturedProductsItem = (props) => {
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
 export default FeaturedProductsItem;
