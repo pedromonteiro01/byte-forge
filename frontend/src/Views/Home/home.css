@@ -102,13 +102,28 @@
 }
 
 @media (max-width: 768px) {
+    .background-image-container {
+        /* Adjustments for the background container */
+    }
+
+    .clock-container {
+        /* Adjust clock size and position */
+        top: 5%; /* Example adjustment */
+        width: 80%; /* Example adjustment */
+    }
+
+    .quote-container {
+        top: 60%; /* Adjust position */
+        width: 90%; /* Wider to accommodate smaller text */
+    }
+
     .quote {
-        font-size: 1rem;
-        width: 50%;
+        font-size: 1.5rem; /* Larger font for readability */
+        width: 100%; /* Full width */
     }
 
     .shop-now {
-        padding: 15px 30px;
-        font-size: 1.25rem;
+        font-size: 1rem; /* Adjust button font size */
+        padding: 10px 15px; /* Adjust button padding */
     }
 }

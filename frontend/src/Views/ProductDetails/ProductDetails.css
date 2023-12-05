@@ -1,0 +1,175 @@
+.product-detail {
+    margin: 8rem 6rem 4rem 6rem;
+}
+
+.product-detail-wrapper {
+    width: 80%;
+    margin: 0 5% 0 15%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.image-product-details {
+    width: 60%;
+    padding-left: 10%;
+}
+
+.image-product-details h4 {
+    font-family: 'Oswald';
+    font-size: 1.6rem;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+.image-product-details hr {
+    margin-bottom: 1.5rem;
+    width: 80%;
+    margin-right: 20%;
+    color: #ccc;
+    background-color: #ccc;
+}
+
+.image-product-details span {
+    color: #756c6c;
+    display: block;
+    margin-top: 1.5rem;
+}
+
+.color-button-wrapper {
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-image-container {
+    text-align: center;
+    width: 20rem;
+    height: 22rem;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.image-gallery {
+    margin-left: 12rem;
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-top: 5rem;
+}
+
+.gallery-image {
+    width: 100px;
+    cursor: pointer;
+    border: 3px solid transparent;
+}
+
+.gallery-image:hover {
+    border: 3px solid #555;
+}
+
+.color-selector {
+    margin: 1.5rem 0;
+}
+
+.color-button {
+    border: none;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.comprar-button {
+    letter-spacing: 1px;
+    font-weight: 300;
+    font-family: 'Oswald';
+    text-transform: uppercase;
+    display: block;
+    padding: 1rem 1.5rem;
+    font-size: 18px;
+    color: white;
+    background-color: #242121;
+    border: none;
+    cursor: pointer;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+    .product-detail {
+        margin: 6rem 2rem 2rem 2rem; /* Uniform top and horizontal margins */
+    }
+
+    .product-detail-wrapper {
+        margin: 0 auto; /* Set equal left and right margins */
+        flex-direction: column; /* Stack elements vertically */
+    }
+
+    .hero-image-container {
+        width: auto; /* Full width for smaller screens */
+        height: auto;
+        order: 1; /* Keep the hero image at the top */
+    }
+
+    .image-gallery {
+        order: 2; /* Place the image gallery below the hero image */
+        margin: 2rem auto; /* Center the gallery with auto margins */
+        flex-wrap: wrap; /* Wrap images if they don't fit in one line */
+        justify-content: center; /* Center the images */
+    }
+
+    .image-product-details {
+        order: 3; /* Place the product details last */
+        width: 100%;
+        padding: 0; /* Remove extra padding */
+    }
+
+    .gallery-image {
+        width: 80px; /* Slightly smaller images */
+    }
+
+    .comprar-button,
+    .contact-form button {
+        padding: 0.8rem 1rem; /* Adjust padding for buttons */
+        font-size: 16px; /* Smaller font size for buttons */
+    }
+
+    .contact-form {
+        margin: 20px auto; /* Reduce margin for the form */
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 8px; /* Adjust padding for input elements */
+    }
+}

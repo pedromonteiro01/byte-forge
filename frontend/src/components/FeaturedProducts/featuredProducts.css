@@ -9,3 +9,29 @@
     background: #212121;
     
 }
+
+@media (max-width: 768px) {
+    .featured-products-wrapper {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
+    }
+
+    .featured-products-container,
+    .featured-products-item {
+        width: 90%; /* Adjust width for mobile */
+        height: auto; /* Adjust height */
+    }
+
+    .featured-products-image-wrapper {
+        width: 100%; /* Full width */
+    }
+
+    .featured-products-item-title {
+        font-size: 1.1rem; /* Adjust font size */
+    }
+
+    .featured-products-item-button {
+        flex-direction: column; /* Stack button contents */
+        align-items: flex-start; /* Align to start */
+    }
+}

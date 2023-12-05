@@ -10,6 +10,7 @@ import { IoMoonOutline } from "react-icons/io5";
 import { useDarkMode } from '../DarkModeContext/DarkModeContext';
 import { motion } from 'framer-motion';
 
+
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const { darkMode, setDarkMode } = useDarkMode();
@@ -35,7 +36,7 @@ const Navbar = () => {
                     >
                         {darkMode ?
                             <IoMoonOutline
-                                style={{color: '#fff'}}
+                                style={{ color: '#fff' }}
                                 className="dark-mode-button moon"
                                 onClick={handleDarkModeToggle}
                             />

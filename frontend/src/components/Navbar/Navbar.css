@@ -80,7 +80,7 @@
     width: 25px;
     height: 3px;
     margin: 5px;
-    background-color: white;
+    background-color: #000;
     transition: all 0.3s;
 }
 
@@ -142,5 +142,61 @@
 
     .menu-icon {
         display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        justify-content: space-between; /* Space out logo and hamburger icon */
+    }
+
+    .logo-wrapper {
+        margin-left: 1rem; /* Adjust as needed */
+        width: auto; /* Adjust logo width */
+    }
+
+    .logo-img {
+        height: auto; /* Maintain aspect ratio */
+        max-width: 100px; /* Limit logo size */
+    }
+
+    .nav-items {
+        display: none; /* Hide items initially */
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        position: absolute;
+        top: 60px; /* Adjust as needed */
+        left: 0;
+        background: #212121; /* Change as per theme */
+        transform: translateY(-100%);
+        z-index: 999;
+        padding-top: 20px;
+    }
+
+    .nav-items.open {
+        display: flex;
+        transform: translateY(0);
+    }
+
+    .menu-icon {
+        display: block;
+        position: absolute;
+        right: 10px; /* Align to the right */
+        top: 10px; /* Align vertically */
+    }
+
+    .nav-item {
+        padding: 10px 20px; /* Adjust nav-item padding */
+        color: white; /* Adjust text color */
+    }
+
+    .nav-item a {
+        color: white; /* Adjust link color */
+    }
+
+    .icon-container,
+    .icon-container.dark {
+        background-color: transparent; /* Optional: Change background for icons */
     }
 }
