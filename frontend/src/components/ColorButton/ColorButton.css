@@ -1,11 +1,11 @@
 .color-button {
-    width: 18px;
-    height: 18px;
-    border-radius: 50%;
-    border: 2px solid #fff;
-    margin: 0 5px;
+    border: 2px solid transparent;
     cursor: pointer;
-    box-sizing: border-box;
+    width: 1.3rem;
+    height: 1.3rem;
+    margin-right: 5px;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .color-button.selected {

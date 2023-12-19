@@ -3,9 +3,12 @@ import './ProductDetails.css';
 import template from './template.jpeg';
 import productsData from './data';
 import ColorButton from '../../components/ColorButton/ColorButton';
+import FormInput from '../../components/FormInput/FormInput';
+import ReCAPTCHA from "react-google-recaptcha";
 
 const ProductDetailPage = () => {
   const [selectedImage, setSelectedImage] = useState(template);
+  const [captchaValue, setCaptchaValue] = useState(null);
   const product = productsData[0];
 
   const handleImageSelect = (image) => {
@@ -15,6 +18,21 @@ const ProductDetailPage = () => {
   const scrollToForm = () => {
     document.getElementById('contact-form').scrollIntoView({ behavior: 'smooth' });
   };
+
+  const handleCaptchaChange = (value) => {
+    setCaptchaValue(value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (captchaValue) {
+      // Handle form submission here
+    } else {
+      // Prompt user to complete the reCAPTCHA
+    }
+  };
+
+
 
   return (
     <div className="product-detail">
@@ -46,9 +64,33 @@ const ProductDetailPage = () => {
         ))}
       </div>
       <div id="contact-form" className="contact-form">
-        <input type="email" placeholder="Your Email" />
-        <textarea placeholder="Project Description"></textarea>
-        <button type="submit">Send</button>
+        <div className="form-row">
+          <FormInput
+            label="* Nome"
+            id="name"
+            type="text"
+            placeholder="Nome"
+            className="half-width"
+          />
+          <FormInput
+            label="* Email"
+            id="email"
+            type="email"
+            placeholder="Email"
+            className="half-width"
+          />
+        </div>
+        <div className="input-group full-width">
+          <label htmlFor="message">* Descrição do Projeto</label>
+          <textarea id="message" placeholder="Mensagem" className="form-textarea"></textarea>
+        </div>
+        <div className='button-recaptcha'>
+        <ReCAPTCHA
+          sitekey="6Ld-wTUpAAAAAG16LVBwtid-AUV-4jM9NsUVfMpl"
+          onChange={handleCaptchaChange}
+        />
+        <button type="submit" className="form-button similar-style" onClick={handleSubmit}>Enviar</button>
+        </div>
       </div>
     </div>
   );

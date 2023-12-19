@@ -1,0 +1,28 @@
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px; /* Adjust margin as needed */
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.input-group label {
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+    width: 100%;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.form-input:focus {
+    box-shadow: 0 0 5px #28a745;
+    border-color: #28a745;
+}

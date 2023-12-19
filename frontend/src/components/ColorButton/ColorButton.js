@@ -8,8 +8,7 @@ const ColorButton = ({ colors }) => {
     const handleButtonClick = (index) => {
         setSelectedColorIndex(index);
         setIsAnimating(true);
-        // Reset animation state after it completes
-        setTimeout(() => setIsAnimating(false), 300); // Assuming animation duration is 300ms
+        setTimeout(() => setIsAnimating(false), 300);
     };
 
     return (
@@ -18,7 +17,7 @@ const ColorButton = ({ colors }) => {
                 <button 
                     key={index} 
                     className={`color-button ${selectedColorIndex === index ? 'selected' : ''} ${isAnimating && selectedColorIndex === index ? 'animate' : ''}`}
-                    style={color.includes('gradient') ? { background: color } : { backgroundColor: color }}
+                    style={{ background: color }}
                     onClick={() => handleButtonClick(index)}
                 ></button>
             ))}
