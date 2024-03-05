@@ -5,6 +5,7 @@ import productsData from './data';
 import ColorButton from '../../components/ColorButton/ColorButton';
 import FormInput from '../../components/FormInput/FormInput';
 import ReCAPTCHA from "react-google-recaptcha";
+import '@fortawesome/fontawesome-free/css/all.css';
 
 const ProductDetailPage = () => {
   const [selectedImage, setSelectedImage] = useState(template);
@@ -31,8 +32,6 @@ const ProductDetailPage = () => {
       // Prompt user to complete the reCAPTCHA
     }
   };
-
-
 
   return (
     <div className="product-detail">
@@ -63,6 +62,25 @@ const ProductDetailPage = () => {
           />
         ))}
       </div>
+
+      <div className="fancy-section">
+        <div className="feature">
+          <i className="fas fa-headset fa-3x"></i>
+          <h5>Customer Support 24/7</h5>
+          <p>Always here to help you with your queries.</p>
+        </div>
+        <div className="feature">
+          <i className="fas fa-lock fa-3x"></i>
+          <h5>Security</h5>
+          <p>Your security is our top priority.</p>
+        </div>
+        <div className="feature">
+          <i className="fas fa-shipping-fast fa-3x"></i>
+          <h5>Fast Delivery</h5>
+          <p>Quick and reliable delivery service.</p>
+        </div>
+      </div>
+
       <div id="contact-form" className="contact-form">
         <div className="form-row">
           <FormInput
@@ -85,11 +103,11 @@ const ProductDetailPage = () => {
           <textarea id="message" placeholder="Mensagem" className="form-textarea"></textarea>
         </div>
         <div className='button-recaptcha'>
-        <ReCAPTCHA
-          sitekey="6Ld-wTUpAAAAAG16LVBwtid-AUV-4jM9NsUVfMpl"
-          onChange={handleCaptchaChange}
-        />
-        <button type="submit" className="form-button similar-style" onClick={handleSubmit}>Enviar</button>
+          <ReCAPTCHA
+            sitekey="6Ld-wTUpAAAAAG16LVBwtid-AUV-4jM9NsUVfMpl"
+            onChange={handleCaptchaChange}
+          />
+          <button type="submit" className="form-button similar-style" onClick={handleSubmit}>Enviar</button>
         </div>
       </div>
     </div>

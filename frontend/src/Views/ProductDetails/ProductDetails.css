@@ -172,6 +172,37 @@
     align-items: center;
 }
 
+.fancy-section {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 0;
+    background-color: #f7f7f7;
+    margin: 40px 0;
+  }
+  
+  .feature {
+    text-align: center;
+  }
+
+  .feature:hover {
+    transition: transform 0.5s ease;
+    transform: translateY(-10px);
+  }
+  
+  .feature h5 {
+    margin-top: 20px;
+    font-weight: bold;
+  }
+  
+  .feature p {
+    margin-top: 10px;
+    color: #666;
+  }
+  
+  .fa-3x {
+    color: #007bff;
+  }
+
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(-20px); }
     to { opacity: 1; transform: translateY(0); }
