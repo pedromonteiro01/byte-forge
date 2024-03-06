@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
-import logo from './logo2.png';
-import logoWhite from './logo-white.png';
+import logo from './webcraft.png';
+import logoWhite from './webcraft2.png';
 
 import { MdLightMode } from 'react-icons/md';
 import { IoMoonOutline } from "react-icons/io5";

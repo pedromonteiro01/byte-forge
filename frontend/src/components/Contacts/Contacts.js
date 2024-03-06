@@ -13,7 +13,7 @@ const Contacts = () => {
                 <button type="submit">Subscribe</button>
             </form>
             <div className="social-links">
-                <a href="https://instagram.com/webcraft" target="_blank" rel="noopener noreferrer" className="social-link">
+                <a href="https://instagram.com/_webcraft_" target="_blank" rel="noopener noreferrer" className="social-link">
                     <FaInstagram className='social-link-a' /> @webcraft
                 </a>
                 <a href="https://facebook.com/webcraft" target="_blank" rel="noopener noreferrer" className="social-link">
