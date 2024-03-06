@@ -1,0 +1,70 @@
+.about-us {
+    background-color: #f7f7f7;
+    color: #333;
+    padding: 5rem 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.about-us-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.about-us-header {
+    font-size: 3rem;
+    text-align: center;
+    color: #222;
+    margin-top: 0;
+    margin-bottom: 3rem;
+}
+
+.about-us-p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    text-align: justify;
+    margin-bottom: 2rem;
+}
+
+.highlight {
+    color: #4A90E2;
+    font-weight: 600;
+}
+
+.mission-section {
+    display: flex;
+    align-items: center;
+    color: #666;
+    padding: 0.5rem 0;
+    gap: 0.7rem;
+    overflow: hidden;
+}
+
+.mission-text {
+    overflow: hidden;
+    font-size: 1.18em;
+    font-style: italic;
+    width: 100%;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: #fff;
+    }
+}
