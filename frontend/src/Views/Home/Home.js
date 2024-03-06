@@ -6,6 +6,7 @@ import Clock from 'react-simple-clock' // Make sure this component can accept an
 import FeaturedProducts from '../../components/FeaturedProducts/FeaturedProducts';
 import { useDarkMode } from '../../components/DarkModeContext/DarkModeContext';
 import AboutUs from '../../components/AboutUs/AboutUs';
+import Contacts from '../../components/Contacts/Contacts';
 
 const Home = () => {
     const [time, setTime] = useState(new Date());
@@ -50,6 +51,7 @@ const Home = () => {
                 <p className={`home-products-container-header ${darkMode ? 'dark' : ''}`}>Featured Products</p>
                 <FeaturedProducts />
             </div>
+            <Contacts />
         </>
     );
 };

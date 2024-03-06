@@ -99,7 +99,7 @@
     width: 100%;
     text-align: center;
     font-family: 'Oswald';
-    font-size: 2.2rem;
+    font-size: 2.6rem;
     color: #3d3c3c;
 }
 
@@ -116,10 +116,6 @@
 }
 
 @media (max-width: 768px) {
-    .background-image-container {
-        /* Adjustments for the background container */
-    }
-
     .clock-container {
         /* Adjust clock size and position */
         top: 5%; /* Example adjustment */
