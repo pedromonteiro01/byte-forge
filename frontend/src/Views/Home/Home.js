@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './home.css';
 import background from './b4.png';
+import backgroundDark from './b5.png';
 import Clock from 'react-simple-clock' // Make sure this component can accept an initial time prop
 import FeaturedProducts from '../../components/FeaturedProducts/FeaturedProducts';
 import { useDarkMode } from '../../components/DarkModeContext/DarkModeContext';
@@ -25,13 +26,13 @@ const Home = () => {
         <>
             <div className="home-container">
                 <div className="background-image-container">
-                    <img src={background} alt="Background" className="background-image" />
+                    <img src={darkMode ? backgroundDark : background} alt="Background" className="background-image" />
                     <div className='clock-container'>
                         <Clock
                             live={true}
                             initialTime={time} // Pass the current time as a prop
                             hourMarkFormat="number"
-                            className="clock"
+                            className={`clock ${darkMode ? 'dark' : ''}`}
                             mode="dark"
                             style={{ color: 'white' }}
                         />

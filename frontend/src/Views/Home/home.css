@@ -42,6 +42,10 @@
     color: white;
 }
 
+.quote-container.dark p {
+    color: #fff;
+}
+
 .quote-container.dark button {
     color: #fff;
     background-color: #212121;
@@ -78,6 +82,16 @@
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     background-image: url(./wood-pattern.png);
 }
+
+.clock.dark {
+    border-width: 7px !important;
+    border-color: #5b4728 !important;
+    background-color: #614b2b !important;
+    opacity: 0.9;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    background-image: url(./wood-pattern.png);
+}
+
 
 .home-products-container-header {
     margin: 0;
