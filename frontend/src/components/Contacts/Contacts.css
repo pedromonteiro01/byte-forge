@@ -31,7 +31,7 @@
 }
 
 .social-link {
-    color: #4A90E2;
+    color: #333;
     text-decoration: none;
     display: flex;
     flex-direction: column;
@@ -41,11 +41,11 @@
 }
 
 .social-link-a {
-    font-size: 1.8em;
+    font-size: 1.9em;
 }
 
 .social-link:hover {
-    color: #333;
+    text-decoration: underline;
 }
 
 .newsletter-subscribe {
@@ -60,6 +60,7 @@
 .newsletter-subscribe input {
     flex-grow: 1;
     padding: 0.8rem;
+    font-size: 0.95rem;
     border: 1px solid #ccc;
     color: #333;
     background-color: #fff;
@@ -67,7 +68,8 @@
 }
 
 .newsletter-subscribe button {
-    padding: 10px 20px;
+    padding: 0.8rem 1.5rem;
+    font-size: 0.95rem;
     background-color: #4A90E2;
     color: #fff;
     border: none;
